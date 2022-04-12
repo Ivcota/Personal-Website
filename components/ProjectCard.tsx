@@ -50,11 +50,11 @@ const ProjectCard: FC<Props> = ({
         <Title order={2}> {title} </Title>
         <Text>{description}</Text>
         <Group>
-          <a href={sourceCode} target="_blank">
+          <a href={sourceCode} target="_blank" rel="noreferrer">
             <Button className={classes.button}>Source Code</Button>
           </a>
           {liveSite && (
-            <a href={liveSite} target="_blank">
+            <a href={liveSite} target="_blank" rel="noreferrer">
               <Button className={classes.button}>Live Site</Button>
             </a>
           )}

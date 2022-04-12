@@ -57,8 +57,8 @@ const Home: NextPage = () => {
           Interface...
         </h1>
         <Text mt="sm">
-          I'll build out a high-quality web application, website, or funnel at a
-          competitive price that will raise your eyebrows.
+          I&#39;ll build out a high-quality web application, website, or funnel
+          at a competitive price that will raise your eyebrows.
         </Text>
 
         <Text mt="sm">
@@ -67,9 +67,10 @@ const Home: NextPage = () => {
         </Text>
 
         <Text underline mt="sm">
-          I'm a front-end developer that's built internal web applications,
-          high-traffic funnel sites, and profitabled shopify stores. I'm also a
-          coding instructor at the Hayward Unified School District.
+          I&#39;m a front-end developer that&#39;s built internal web
+          applications, high-traffic funnel sites, and profitabled shopify
+          stores. I&#39;m also a coding instructor at the Hayward Unified School
+          District.
         </Text>
 
         <Text mt="sm">

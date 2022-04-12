@@ -7,10 +7,10 @@ const Project = () => {
     <Container size="sm">
       <Title>Projects</Title>
       <Text mt="md">
-        Here are some projects you can look at if you're intrested in seeing my
-        technical skills. My production work cannot be displayed since the code
-        is not public, however, you have a good view of what I've got going
-        currently on the side.
+        Here are some projects you can look at if you&#39;re intrested in seeing
+        my technical skills. My production work cannot be displayed since the
+        code is not public, however, you have a good view of what I&#39;ve got
+        going currently on the side.
       </Text>
 
       <Stack mt="lg" spacing="sm" mb="lg">
