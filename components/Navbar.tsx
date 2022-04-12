@@ -99,7 +99,7 @@ const Navbar: FC = () => {
       <Drawer opened={isOpen} position="right" onClose={() => toggleIsOpen()}>
         <Container>
           <Stack>
-            <Link href="/">
+            {/* <Link href="/">
               <Text
                 className={classes.logo}
                 onClick={() => toggleIsOpen()}
@@ -107,6 +107,19 @@ const Navbar: FC = () => {
                 align="center"
               >
                 Iverson Diles
+              </Text>
+            </Link> */}
+
+            <Link href="/projects">
+              <Text
+                onClick={() => toggleIsOpen()}
+                align="center"
+                style={{
+                  cursor: "pointer",
+                }}
+                variant="link"
+              >
+                Home
               </Text>
             </Link>
 
@@ -136,12 +149,12 @@ const Navbar: FC = () => {
               </Text>
             </Link> */}
 
-            <Button
+            {/* <Button
               className={classes.drawerButton}
               onClick={() => toggleColorScheme()}
             >
               Start Now
-            </Button>
+            </Button> */}
           </Stack>
         </Container>
       </Drawer>
