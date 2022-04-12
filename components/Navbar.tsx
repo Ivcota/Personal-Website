@@ -10,8 +10,9 @@ import {
   Text,
   Title,
   useMantineColorScheme,
+  useMantineTheme,
 } from "@mantine/core";
-import { useToggle } from "@mantine/hooks";
+import { useToggle, useMediaQuery, useColorScheme } from "@mantine/hooks";
 import Link from "next/link";
 import React, { FC } from "react";
 import { Moon, Sun } from "tabler-icons-react";
@@ -36,6 +37,10 @@ const Navbar: FC = () => {
   const [isOpen, toggleIsOpen] = useToggle(false, [false, true]);
   const { classes } = useClasses();
 
+  const theme = useMantineTheme();
+
+  const showDrawer = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+
   return (
     <>
       <Group position="apart" px={20} mt={5}>
@@ -48,7 +53,35 @@ const Navbar: FC = () => {
           <ActionIcon onClick={() => toggleColorScheme()}>
             {colorScheme === "light" ? <Moon /> : <Sun />}
           </ActionIcon>
-          <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
+          {showDrawer ? (
+            <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
+          ) : (
+            <Group>
+              <Link href="/projects">
+                <Text
+                  align="center"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  variant="link"
+                >
+                  Projects
+                </Text>
+              </Link>
+
+              <Link href="/resume">
+                <Text
+                  align="center"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  variant="link"
+                >
+                  Resume
+                </Text>
+              </Link>
+            </Group>
+          )}
         </Group>
       </Group>
       <Drawer opened={isOpen} position="right" onClose={() => toggleIsOpen()}>
@@ -65,18 +98,6 @@ const Navbar: FC = () => {
               </Text>
             </Link>
 
-            <Link href="/resume">
-              <Text
-                onClick={() => toggleIsOpen()}
-                align="center"
-                style={{
-                  cursor: "pointer",
-                }}
-                variant="link"
-              >
-                Resume
-              </Text>
-            </Link>
             <Link href="/projects">
               <Text
                 onClick={() => toggleIsOpen()}
@@ -89,6 +110,20 @@ const Navbar: FC = () => {
                 Projects
               </Text>
             </Link>
+
+            <Link href="/resume">
+              <Text
+                onClick={() => toggleIsOpen()}
+                align="center"
+                style={{
+                  cursor: "pointer",
+                }}
+                variant="link"
+              >
+                Resume
+              </Text>
+            </Link>
+
             <Button
               className={classes.drawerButton}
               onClick={() => toggleColorScheme()}

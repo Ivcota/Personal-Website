@@ -33,13 +33,13 @@ const useStyles = createStyles((theme) => ({
     transition: "ease-in-out",
     transitionDuration: "200ms",
     ":hover": {
-      boxShadow: theme.shadows.md,
-      transform: `translateY(-1rem)`,
+      boxShadow: theme.shadows.sm,
+      transform: `translateY(-.1rem)`,
     },
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       ":hover": {
-        transform: `translateY(-.2rem)`,
+        transform: `translateY(-.1rem)`,
       },
     },
   },

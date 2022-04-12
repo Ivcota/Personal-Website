@@ -16,8 +16,15 @@ const Project = () => {
       <Stack mt="lg" spacing="sm" mb="lg">
         <ProjectCard
           title="Portfolio Stacker"
-          description="A simple project I started that's based on React, GraphQL, and NodeJS."
-          sourceCode="https://www.jw.org"
+          description="A Fullstack application built with Typescript, React, and Node. Making use of GraphQL, the FrontEnd is fetching and mutating data."
+          sourceCode="https://github.com/Ivcota/Portfolio-Stacker"
+        />
+
+        <ProjectCard
+          title="AZ Convention | 2022"
+          description="A simple application that subscribes members to an aweber list. The codebase is just React."
+          sourceCode="https://github.com/Ivcota/simple-memorial-form"
+          liveSite="https://www.azconvention.org/"
         />
       </Stack>
     </Container>

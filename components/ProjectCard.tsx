@@ -2,10 +2,12 @@ import {
   Button,
   Card,
   CardSection,
+  createStyles,
   Group,
   Image,
   Stack,
   Text,
+  Title,
   useMantineTheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
@@ -15,37 +17,47 @@ interface Props {
   title: string;
   description: string;
   sourceCode: string;
+  image?: string;
   liveSite?: string;
 }
+
+const useStyles = createStyles({
+  button: {
+    fontWeight: "normal",
+  },
+});
 
 const ProjectCard: FC<Props> = ({
   title,
   description,
   sourceCode,
   liveSite,
+  image,
 }) => {
   const { breakpoints } = useMantineTheme();
 
   const size = useMediaQuery(`(max-width: ${breakpoints.sm}px)`);
+  const { classes } = useStyles();
 
   return (
     <Card shadow="md">
-      <CardSection>
-        <Image
-          height={size ? 300 : 400}
-          src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-        />
-      </CardSection>
+      {image ? (
+        <CardSection>
+          <Image height={size ? 300 : 400} src={image} />
+        </CardSection>
+      ) : null}
       <Stack mt="xs">
-        <Text weight="bold"> {title} </Text>
+        <Title order={2}> {title} </Title>
         <Text>{description}</Text>
         <Group>
           <a href={sourceCode}>
-            <Button>Source Code</Button>
+            <Button className={classes.button}>Source Code</Button>
           </a>
-          <a href={liveSite}>
-            <Button>Live Site</Button>
-          </a>
+          {liveSite && (
+            <a href={liveSite}>
+              <Button className={classes.button}>Live Site</Button>
+            </a>
+          )}
         </Group>
       </Stack>
     </Card>
