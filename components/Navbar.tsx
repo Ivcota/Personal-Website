@@ -43,7 +43,7 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <Group position="apart" px={20} mt={5}>
+      <Group position="apart" px={20} py={40} mt={5}>
         <Link href="/">
           <Title className={classes.logo} order={4}>
             ID
@@ -57,6 +57,18 @@ const Navbar: FC = () => {
             <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
           ) : (
             <Group>
+              <Link href="/">
+                <Text
+                  align="center"
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  variant="link"
+                >
+                  Home
+                </Text>
+              </Link>
+
               <Link href="/projects">
                 <Text
                   align="center"
@@ -69,7 +81,7 @@ const Navbar: FC = () => {
                 </Text>
               </Link>
 
-              <Link href="/resume">
+              {/* <Link href="/resume">
                 <Text
                   align="center"
                   style={{
@@ -79,7 +91,7 @@ const Navbar: FC = () => {
                 >
                   Resume
                 </Text>
-              </Link>
+              </Link> */}
             </Group>
           )}
         </Group>
@@ -111,7 +123,7 @@ const Navbar: FC = () => {
               </Text>
             </Link>
 
-            <Link href="/resume">
+            {/* <Link href="/resume">
               <Text
                 onClick={() => toggleIsOpen()}
                 align="center"
@@ -122,7 +134,7 @@ const Navbar: FC = () => {
               >
                 Resume
               </Text>
-            </Link>
+            </Link> */}
 
             <Button
               className={classes.drawerButton}

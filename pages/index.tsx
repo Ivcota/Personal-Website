@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   paper: {
-    boxShadow: theme.shadows.xs,
+    boxShadow: "none",
     transition: "ease-in-out",
     transitionDuration: "200ms",
     ":hover": {
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
 
   return (
     <Container size={900}>
-      <Paper className={classes.paper} shadow="xs" p="lg">
+      <Paper className={classes.paper} shadow="xs" px="lg" py="xs">
         <h1 className={classes.header}>
           Let Me Develop Your Next Application With An Intuitive User
           Interface...
