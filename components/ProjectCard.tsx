@@ -2,7 +2,6 @@ import {
   Button,
   Card,
   CardSection,
-  createStyles,
   Group,
   Image,
   Stack,
@@ -10,9 +9,21 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import React from "react";
+import React, { FC } from "react";
 
-const ProjectCard = () => {
+interface Props {
+  title: string;
+  description: string;
+  sourceCode: string;
+  liveSite?: string;
+}
+
+const ProjectCard: FC<Props> = ({
+  title,
+  description,
+  sourceCode,
+  liveSite,
+}) => {
   const { breakpoints } = useMantineTheme();
 
   const size = useMediaQuery(`(max-width: ${breakpoints.sm}px)`);
@@ -26,14 +37,15 @@ const ProjectCard = () => {
         />
       </CardSection>
       <Stack mt="xs">
-        <Text weight="bold"> Portfolio Stacker </Text>
-        <Text>
-          This is my Portfolio Stacker Application. Here's a full-stack
-          application that's being driven by GraphQL.
-        </Text>
+        <Text weight="bold"> {title} </Text>
+        <Text>{description}</Text>
         <Group>
-          <Button>Source Code</Button>
-          <Button>Live Site</Button>
+          <a href={sourceCode}>
+            <Button>Source Code</Button>
+          </a>
+          <a href={liveSite}>
+            <Button>Live Site</Button>
+          </a>
         </Group>
       </Stack>
     </Card>
