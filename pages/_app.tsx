@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         theme={{
           fontFamily: "Space Mono",
           fontFamilyMonospace: "Space Mono",
+          defaultRadius: "md",
           headings: {
             fontFamily: "Inter",
           },
@@ -50,6 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               "#01010a",
             ],
           },
+
           colorScheme: colorScheme,
         }}
         withGlobalStyles

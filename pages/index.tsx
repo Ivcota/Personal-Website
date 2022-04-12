@@ -27,6 +27,22 @@ const useStyles = createStyles((theme) => ({
       fontSize: theme.fontSizes.xl * 1.5,
     },
   },
+
+  paper: {
+    boxShadow: theme.shadows.xs,
+    transition: "ease-in-out",
+    transitionDuration: "200ms",
+    ":hover": {
+      boxShadow: theme.shadows.md,
+      transform: `translateY(-1rem)`,
+    },
+
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      ":hover": {
+        transform: `translateY(-.2rem)`,
+      },
+    },
+  },
 }));
 
 const Home: NextPage = () => {
@@ -35,7 +51,7 @@ const Home: NextPage = () => {
 
   return (
     <Container size={900}>
-      <Paper shadow="xl" p="lg">
+      <Paper className={classes.paper} shadow="xs" p="lg">
         <h1 className={classes.header}>
           Let Me Develop Your Next Application With An Intuitive User
           Interface...
@@ -51,7 +67,7 @@ const Home: NextPage = () => {
         </Text>
 
         <Text underline mt="sm">
-          I'm a front-end developer that's build internal web applications,
+          I'm a front-end developer that's built internal web applications,
           high-traffic funnel sites, and profitabled shopify stores. I'm also a
           coding instructor at the Hayward Unified School District.
         </Text>
@@ -86,7 +102,7 @@ const Home: NextPage = () => {
         </Group>
       </Paper>
 
-      <Paper shadow="xl" p="lg" mt={30} mb={80}>
+      <Paper className={classes.paper} shadow="xs" p="lg" mt={30} mb={80}>
         <Title>Skills</Title>
         <Group my={20} position="apart" grow>
           <Text weight="bold">Languages</Text>
