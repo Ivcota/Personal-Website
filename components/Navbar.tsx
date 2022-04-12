@@ -43,7 +43,7 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <Group position="apart" px={20} py={40} mt={5}>
+      <Group position="apart" px="md" py={40} mt={5}>
         <Link href="/">
           <Title className={classes.logo} order={4}>
             ID
