@@ -43,45 +43,46 @@ const Navbar: FC = () => {
 
   return (
     <>
-      <Group position="apart" px="md" py={40} mt={5}>
-        <Link href="/">
-          <Title className={classes.logo} order={4}>
-            ID
-          </Title>
-        </Link>
-        <Group position="apart">
-          <ActionIcon onClick={() => toggleColorScheme()}>
-            {colorScheme === "light" ? <Moon /> : <Sun />}
-          </ActionIcon>
-          {showDrawer ? (
-            <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
-          ) : (
-            <Group>
-              <Link href="/">
-                <Text
-                  align="center"
-                  style={{
-                    cursor: "pointer",
-                  }}
-                  variant="link"
-                >
-                  Home
-                </Text>
-              </Link>
+      <Container size="lg">
+        <Group position="apart" py={40}>
+          <Link href="/">
+            <Title className={classes.logo} order={4}>
+              ID
+            </Title>
+          </Link>
+          <Group position="apart">
+            <ActionIcon onClick={() => toggleColorScheme()}>
+              {colorScheme === "light" ? <Moon /> : <Sun />}
+            </ActionIcon>
+            {showDrawer ? (
+              <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
+            ) : (
+              <Group>
+                <Link href="/">
+                  <Text
+                    align="center"
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    variant="link"
+                  >
+                    Home
+                  </Text>
+                </Link>
 
-              <Link href="/projects">
-                <Text
-                  align="center"
-                  style={{
-                    cursor: "pointer",
-                  }}
-                  variant="link"
-                >
-                  Projects
-                </Text>
-              </Link>
+                <Link href="/projects">
+                  <Text
+                    align="center"
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    variant="link"
+                  >
+                    Projects
+                  </Text>
+                </Link>
 
-              {/* <Link href="/resume">
+                {/* <Link href="/resume">
                 <Text
                   align="center"
                   style={{
@@ -92,10 +93,11 @@ const Navbar: FC = () => {
                   Resume
                 </Text>
               </Link> */}
-            </Group>
-          )}
+              </Group>
+            )}
+          </Group>
         </Group>
-      </Group>
+      </Container>
       <Drawer opened={isOpen} position="right" onClose={() => toggleIsOpen()}>
         <Container>
           <Stack>
