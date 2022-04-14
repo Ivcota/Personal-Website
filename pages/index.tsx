@@ -90,7 +90,6 @@ const Home: NextPage = () => {
                 variant="filled"
                 size="lg"
                 radius="xl"
-                onClick={() => toggleColorScheme()}
               >
                 <BrandGithub />
               </ActionIcon>
