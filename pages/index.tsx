@@ -94,7 +94,7 @@ const Home: NextPage = () => {
       <Container size={900}>
         <Paper className={classes.paper} shadow="xs" px="lg" py="xs">
           <h1 ref={headlineRef} className={classes.header}>
-            Let's Develop Your Next User Interface...
+            Let&#39;s Develop Your Next User Interface...
           </h1>
           <div ref={textRef}>
             <Text mt="sm">
