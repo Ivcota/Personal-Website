@@ -58,8 +58,7 @@ const Home: NextPage = () => {
       <Container size={900}>
         <Paper className={classes.paper} shadow="xs" px="lg" py="xs">
           <h1 className={classes.header}>
-            Let Me Develop Your Next Application With An Intuitive User
-            Interface...
+            Let's Develop Your Next User Interface...
           </h1>
           <Text mt="sm">
             I&#39;ll build out a high-quality web application, website, or
@@ -72,11 +71,15 @@ const Home: NextPage = () => {
             scratch.
           </Text>
 
+          <Text mt="sm">
+            I&#39;m a front-end / full-stack developer that&#39;s built internal
+            web applications, high-traffic funnel sites, and profitabled shopify
+            stores.
+          </Text>
+
           <Text underline mt="sm">
-            I&#39;m a front-end developer that&#39;s built internal web
-            applications, high-traffic funnel sites, and profitabled shopify
-            stores. I&#39;m also a contracted coding instructor in the Hayward
-            Unified School District.
+            I&#39;m also a contracted coding instructor in the Hayward Unified
+            School District.
           </Text>
 
           <Text mt="sm">
