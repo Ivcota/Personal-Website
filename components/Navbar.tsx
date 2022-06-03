@@ -54,6 +54,7 @@ const Navbar: FC = () => {
             <ActionIcon onClick={() => toggleColorScheme()}>
               {colorScheme === "light" ? <Moon /> : <Sun />}
             </ActionIcon>
+
             {showDrawer ? (
               <Burger opened={isOpen} onClick={() => toggleIsOpen()} />
             ) : (
@@ -81,18 +82,6 @@ const Navbar: FC = () => {
                     Projects
                   </Text>
                 </Link>
-
-                {/* <Link href="/resume">
-                <Text
-                  align="center"
-                  style={{
-                    cursor: "pointer",
-                  }}
-                  variant="link"
-                >
-                  Resume
-                </Text>
-              </Link> */}
               </Group>
             )}
           </Group>
@@ -101,17 +90,6 @@ const Navbar: FC = () => {
       <Drawer opened={isOpen} position="right" onClose={() => toggleIsOpen()}>
         <Container>
           <Stack>
-            {/* <Link href="/">
-              <Text
-                className={classes.logo}
-                onClick={() => toggleIsOpen()}
-                size="lg"
-                align="center"
-              >
-                Iverson Diles
-              </Text>
-            </Link> */}
-
             <Link href="/projects">
               <Text
                 onClick={() => toggleIsOpen()}
@@ -137,26 +115,6 @@ const Navbar: FC = () => {
                 Projects
               </Text>
             </Link>
-
-            {/* <Link href="/resume">
-              <Text
-                onClick={() => toggleIsOpen()}
-                align="center"
-                style={{
-                  cursor: "pointer",
-                }}
-                variant="link"
-              >
-                Resume
-              </Text>
-            </Link> */}
-
-            {/* <Button
-              className={classes.drawerButton}
-              onClick={() => toggleColorScheme()}
-            >
-              Start Now
-            </Button> */}
           </Stack>
         </Container>
       </Drawer>
