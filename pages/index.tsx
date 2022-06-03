@@ -33,10 +33,6 @@ const useStyles = createStyles((theme) => ({
     boxShadow: "none",
     transition: "ease-in-out",
     transitionDuration: "200ms",
-    ":hover": {
-      boxShadow: theme.shadows.sm,
-      transform: `translateY(-.1rem)`,
-    },
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       ":hover": {
@@ -93,9 +89,7 @@ const Home: NextPage = () => {
       </Head>
       <Container size={900}>
         <Paper className={classes.paper} shadow="xs" px="lg" py="xs">
-
           <h1 ref={headlineRef} className={classes.header}>
-
             Let&#39;s Develop Your Next User Interface...
           </h1>
           <div ref={textRef}>
