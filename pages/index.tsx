@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       <Container size={900}>
         <Paper className={classes.paper} shadow="xs" px="lg" py="xs">
           <h1 className={classes.header}>
-            Let's Develop Your Next User Interface...
+            Let&#39;s Develop Your Next User Interface...
           </h1>
           <Text mt="sm">
             I&#39;ll build out a high-quality web application, website, or
