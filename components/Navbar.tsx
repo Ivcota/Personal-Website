@@ -90,7 +90,7 @@ const Navbar: FC = () => {
       <Drawer opened={isOpen} position="right" onClose={() => toggleIsOpen()}>
         <Container>
           <Stack>
-            <Link href="/projects">
+            <Link href="/">
               <Text
                 onClick={() => toggleIsOpen()}
                 align="center"
