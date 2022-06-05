@@ -14,6 +14,7 @@ import {
 } from "@mantine/core";
 import { useToggle, useMediaQuery, useColorScheme } from "@mantine/hooks";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { FC } from "react";
 import { Moon, Sun } from "tabler-icons-react";
 
@@ -36,6 +37,7 @@ const Navbar: FC = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const [isOpen, toggleIsOpen] = useToggle(false, [false, true]);
   const { classes } = useClasses();
+  const router = useRouter();
 
   const theme = useMantineTheme();
 
@@ -62,6 +64,7 @@ const Navbar: FC = () => {
                 <Link href="/">
                   <Text
                     align="center"
+                    underline={router.asPath === "/" ? true : false}
                     style={{
                       cursor: "pointer",
                     }}
@@ -73,6 +76,7 @@ const Navbar: FC = () => {
 
                 <Link href="/projects">
                   <Text
+                    underline={router.asPath === "/projects" ? true : false}
                     align="center"
                     style={{
                       cursor: "pointer",
@@ -92,6 +96,7 @@ const Navbar: FC = () => {
           <Stack>
             <Link href="/">
               <Text
+                underline={router.asPath === "/" ? true : false}
                 onClick={() => toggleIsOpen()}
                 align="center"
                 style={{
@@ -105,6 +110,7 @@ const Navbar: FC = () => {
 
             <Link href="/projects">
               <Text
+                underline={router.asPath === "/projects" ? true : false}
                 onClick={() => toggleIsOpen()}
                 align="center"
                 style={{
